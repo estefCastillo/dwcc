@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/my_script.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="stylesheet" href="styles/css.css" >
+    <link rel="stylesheet" href="styles/skeleton.min.css">
+
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <title>Gestion de Mascotas</title>
+</head>
+
+<body>
+    <h1>Gestion de Citas</h1>
+    <div class="container">
+        <div class="row">
+          <div class="one-half column">
+            <h2><span>Crear<span> Cita</h2>
+            <form>
+                <label>Nombre Mascota</label>
+                <input type="text" name="mascota" id="mascota" class="u-full-width" placeholder="Nombre Mascota" />
+        
+                <label>Nombre Dueño</label>
+                <input type="text" name="propietario" id="propietario" class="u-full-width" placeholder="Nombre  Dueño de la mascota" />
+        
+                <label>Fecha</label>
+                <input type="date" id="fecha" name="fecha"  class="u-full-width" />
+        
+                <label>Hora</label>
+                <input type="time" id="hora" name="hora" class="u-full-width" />
+        
+                <label>Síntomas</label>
+                <textarea class="u-full-width" id="sintomas" name="sintomas"></textarea>
+        
+                <button type="submit" name="enviar" id="enviar" class="u-full-width button-primary">Agregar Cita</button>
+                <input type="hidden" name="id" />
+            </form>    
+          </div>
+
+          <div id="citas" class="one-half column">
+            <h2>Citas</h2>
+            <form action="" id="form-fechaCitas">
+                <input type="date" id="fechaCitas" name="fecha"  class="u-full-width" />
+            </form>
+            <div id="body-citas"></div>
+          </div>
+        </div>
+    </div>
+
+    <template id="tcita">
+        <div class="cita">
+            <p>Mascota: <span>Perro</span> </p>
+            <p>Dueño: <span>Juan</span> </p>
+            <p>Fecha: <span>11-11-2022</span> </p>
+            <p>Hora: <span>14:20</span> </p>
+            <p>Sintomas: <span>Se va por la pata abajo por la pata abajo</span> </p>
+            <button id="cambiar" class="button cambiar one-half-width">Cambiar &times;</button>
+            <button id="eliminar" class="button eliminar one-half-width">Eliminar &times;</button>
+        </div>    
+    </template>
+</body>
+</html>

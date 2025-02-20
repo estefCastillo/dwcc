@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de edad</title>
+    <script src="scripts/myscript.js" defer></script>
+    <link rel="stylesheet" href="styles/misestilos.css">
+</head>
+<body>
+    <header><h1>Calculo de edades</h1></header>
+    <main class="container">
+        <section class="base">
+            <h2>Calculadora de Edad</h2>
+            <div class="block">
+                <label for="dia" class="title">Día</label>
+                <input type="text" name="dia" id="dia" placeholder="dd" minlength="1" maxlength="2" required>
+            </div>
+            <div class="block"> 
+                <label for="mes" class="title">Mes</label>
+                <input type="text" name="mes" id="mes" placeholder="mm" minlength="1" maxlength="2" required>
+            </div>
+            <div class="block">
+                <label for="anho" class="title">Año</label>
+                <input type="text" name="anho" id="anho" placeholder="aaaa" minlength="4" maxlength="4" required>
+            </div>
+            <div class="base">
+                <input type="button" value="Calcular" name="submit" id="submit">
+            </div>
+            <div id="edad">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            </div>
+    </main>
+</body>
+</html>

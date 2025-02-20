@@ -1,0 +1,22 @@
+{
+  "alumnos": [
+    {
+      "id": "1",
+      "nombre": "Marta",
+      "apellidos": "Pérez Rodríguez",
+      "email": "martapr@gmail.com"
+    },
+    {
+      "id": "2",
+      "nombre": "Juan",
+      "apellidos": "Rey Perez",
+      "email": "juanrp@microsoft.com"
+    },
+    {
+      "nombre": "Estefany",
+      "apellidos": "Pacheco Castillo",
+      "email": "estefanyo@gmail.com",
+      "id": "4"
+    }
+  ]
+}
