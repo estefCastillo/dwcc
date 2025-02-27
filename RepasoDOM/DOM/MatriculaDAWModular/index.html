@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/mystyle.css" />
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <title>Matricula de DAW Modular</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Matrícula de DAW Modular</h1>
+    </header>
+    <main>
+      <div id="acciones">
+        <!-- span = Actualizar / Añadir -->
+        <h2><span>Añadir</span> Datos de la Matricula</h2>
+
+        <form action="" id="form-acciones">
+          <p>
+            <label for="">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              size="40"
+              class="completo campo"
+            />
+          </p>
+          <p>
+            <label for="">NIF</label>
+            <input
+              type="text"
+              name="nif"
+              id="nif"
+              size="10"
+              class="completo campo"
+            />
+          </p>
+          <p class="full-row">
+            <label for="BBDD">BBDD</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="CD">CD</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="FOL">FOL</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="LMESXI">LMESXI</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="PROG">PROG</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="SI">SI</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="DWCC">DWCC</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="DWCS">DWCS</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="DAW">DAW</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="EIE">EIE</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="FCT">FCT</label>
+            <input type="checkbox" name="modulo" />
+
+            <label for="PROX">PROX</label>
+            <input type="checkbox" name="modulo" />
+          </p>
+
+          <div class="pie full-row">
+            <input
+              class="boton"
+              type="submit"
+              name="enviar"
+              id="btn-enviar"
+              value="Añadir Matricula"
+            />
+            <input
+              class="boton"
+              type="button"
+              name="cancelar"
+              id="btn-cancelar"
+              value="Cancelar"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div id="listado-datos">
+        <h2>Listado de Alumnos</h2>
+        <!-- template-body-datos -->
+      </div>
+    </main>
+
+    <template id="template-body-datos">
+      <div id="body-datos">
+        <div id="tabla-datos">
+          <div class="item" id="td-cabecera">
+            <p>Nombre</p>
+            <p>Accion</p>
+          </div>
+          <div id="td-body">
+            <!-- template-item -->
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-item">
+      <div class="item">
+        <p><!-- Nombre --></p>
+        <div class="bt-acciones">
+          <i class="fas fa-undo-alt"></i>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

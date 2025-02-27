@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de cursos</title>
+    <link rel="stylesheet" href="assets/styles/all.min.css" />
+    <link rel="stylesheet" href="assets/styles/custom.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container">
+        <div class="row">
+          <div class="four columns">
+            <img src="assets/img/logo.jpg" alt="Logo Universidad" id="logo" />
+          </div>
+          <div class="two columns u-pull-right">
+            <ul>
+              <li class="submenu">
+                <img src="assets/img/cart.png" alt="Carrito" id="img-carrito" />
+                <span><!-- Precio total de los cursos en el carrito --></span>
+                <div id="carrito">
+                  <table id="lista-carrito" class="u-full-width">
+                    <thead>
+                      <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Borrar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Listado de cursos en el carrito -->
+                    </tbody>
+                  </table>
+                  <a href="#" id="vaciar-carrito" class="button u-full-width"
+                    >Vaciar carrito</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="six columns">
+            <div class="contenido-hero">
+              <h2>Aprende algo nuevo</h2>
+              <p>Todos los cursos a 15 &euro;</p>
+              <form action="#" id="busqueda" method="post" class="formulario">
+                <input
+                  type="text"
+                  class="u-full-width"
+                  placeholder="Que te gustaría aprender hoy?"
+                  id="buscador"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="barra">
+      <div class="container">
+        <div class="row">
+          <div class="four columns icono icono1">
+            <p>
+              20,000 Cursos en línea<br />
+              Explora los temas mas recientes
+            </p>
+          </div>
+          <div class="four columns icono icono2">
+            <p>
+              Instructores Expertos<br />
+              Aprende con distintos estilos
+            </p>
+          </div>
+          <div class="four columns icono icono3">
+            <p>
+              Acceso de por vida<br />
+              Aprende a tu ritmo
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LISTADO DE CURSOS -->
+    <div id="lista-cursos" class="container">
+      <h1 id="encabezado" class="encabezado">Cursos en Linea</h1>
+      <div class="cards"><!-- listado de cursos --></div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <nav id="principal" class="menu">
+        <a href="#" class="enlace">Para tu negocio</a>
+        <a href="#" class="enlace">Conviertete en Instructor</a>
+        <a href="#" class="enlace">Aplicaciones móviles</a>
+        <a href="#" class="enlace">Soporte</a>
+        <a href="#" class="enlace">Temas</a>
+      </nav>
+
+      <nav id="secuandaria" class="menu">
+        <a href="#" class="enlace">Quienes somos?</a>
+        <a href="#" class="enlace">Empleo</a>
+        <a href="#" class="enlace">Blog</a>
+      </nav>
+    </footer>
+
+    <!--Template para el card de cada curso a la venta -->
+    <template id="templateCard">
+      <div class="card">
+        <img src="#" class="imagen-curso u-full-width" alt="#" />
+        <div class="info-card">
+          <h4><!-- Titulo del curso --></h4>
+          <p><!-- Profesor del curso --></p>
+          <img src="assets/img/estrellas.png" />
+          <p class="precio">
+            <!-- Precio viejo del curso --><span class="u-pull-right"
+              ><!-- Precio nuevo del curso --></span
+            >
+          </p>
+          <a
+            href="#"
+            class="u-full-width button-primary button input agregar-carrito"
+            >Agregar al Carrito</a
+          >
+        </div>
+      </div>
+    </template>
+
+    <!--Template para cada fila de cada curso en el carrito -->
+    <template id="templateItem">
+      <tr>
+        <td><img src="#" class="imagen-curso u-full-width" /></td>
+        <td><!-- Titulo del curso -->></td>
+        <td><!-- Precio del curso --></td>
+        <td><!-- Número de veces que compro el curso --></td>
+        <td><i class="fa fa-trash"></i></td>
+      </tr>
+    </template>
+
+    <script src="assets/scripts/my_script.js" defer></script>
+  </body>
+</html>
