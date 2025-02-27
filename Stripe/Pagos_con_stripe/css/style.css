@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::before {
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+}
+
+.cuadros {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadros>* {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    color: brown;
+    font-size: 125%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.cuadro:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+}
+
+.cuadro img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.cuadro figcaption {
+    padding: 1rem;
+}
