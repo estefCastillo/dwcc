@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>Recepción de Productos</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/all.min.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
 
-  <body>
-    <div class="container overflow-auto py-3">
-      <form class="p-2">
-        <h1 class="pb-4 text-center">Recepción de Productos</h1>
+<head>
+  <title>Recepción de Productos</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
 
-        <label for="name">Nombre del Producto:</label>
-        <input id="name" type="text" class="form-control my-1" />
-        <div id="alertName" class="d-none alert alert-danger py-2 mb-2">
-          Nombre no válido<br />Ejemplo: Mi 9T
-        </div>
+<body>
+  <div class="container overflow-auto py-3">
+    <form class="p-2">
+      <h1 class="pb-4 text-center">Recepción de Productos</h1>
 
-        <label for="price">Precio del Producto:</label>
-        <input id="price" type="number" class="form-control my-1" />
-        <div id="alertPrice" class="d-none alert alert-danger py-2 mb-2">
-          Precio no válido<br />Ejemplo: 1000
-        </div>
+      <label for="name">Nombre del Producto:</label>
+      <input id="name" type="text" class="form-control my-1" />
+      <div id="alertName" class="d-none alert alert-danger py-2 mb-2">
+        Nombre no válido<br />Ejemplo: Mi 9T
+      </div>
 
-        <label for="category">Categoría del Producto:</label>
-        <select id="category" class="form-select mt-1 mb-2">
-          <!-- 
+      <label for="price">Precio del Producto:</label>
+      <input id="price" type="number" class="form-control my-1" />
+      <div id="alertPrice" class="d-none alert alert-danger py-2 mb-2">
+        Precio no válido<br />Ejemplo: 1000
+      </div>
+
+      <label for="category">Categoría del Producto:</label>
+      <select id="category" class="form-select mt-1 mb-2">
+        <!-- 
           <option value="1">Teléfono</option>
           <option value="2" selected>TV</option>
           <option value="3">Portátil</option> 
          -->
-        </select>
-        <div id="alertCategory" class="d-none alert alert-danger py-2 mb-2">
-          Deberías seleccionar algún valor
-        </div>
+      </select>
+      <div id="alertCategory" class="d-none alert alert-danger py-2 mb-2">
+        Deberías seleccionar algún valor
+      </div>
 
-        <label for="condition">Estado del Producto:</label>
-        <select id="condition" class="form-select mt-1 mb-3">
-          <!-- 
+      <label for="condition">Estado del Producto:</label>
+      <select id="condition" class="form-select mt-1 mb-3">
+        <!-- 
           <option class="bg-success text-white" value="1">
             Excelente
           </option>
@@ -50,51 +51,40 @@
           </option>
           <option class="bg-danger text-white" value="3">Malo</option> 
           -->
-        </select>
-        <div id="alertCondition" class="d-none alert alert-danger py-2 mb-2">
-          Deberías seleccionar algún valor
-        </div>
+      </select>
+      <div id="alertCondition" class="d-none alert alert-danger py-2 mb-2">
+        Deberías seleccionar algún valor
+      </div>
 
-        <div class="text-center w-100">
-          <button
-            id="btnAdd"
-            class="btn mb-1 mb-sm-0 btn-success text-white"
-            type="button"
-          >
-            Añadir Producto
-          </button>
-          <button
-            id="btnClear"
-            class="btn mb-1 mb-sm-0 btn-outline-success"
-            type="button"
-          >
-            Limpiar Formulario
-          </button>
-        </div>
+      <div class="text-center w-100">
+        <button id="btnAdd" class="btn mb-1 mb-sm-0 btn-success text-white" type="button">
+          Añadir Producto
+        </button>
+        <button id="btnClear" class="btn mb-1 mb-sm-0 btn-outline-success" type="button">
+          Limpiar Formulario
+        </button>
+      </div>
 
-        <label for="search" class="mt-4">Filtrar Productos:</label>
-        <input
-          id="search"
-          class="form-control my-2"
-          placeholder="Nombre.."
-          type="search"
-        />
-      </form>
+      <label for="search" class="mt-4">Filtrar Productos:</label>
+      <input id="search" class="form-control my-2" placeholder="Nombre.." type="search" />
+    </form>
 
-      <table class="table table-striped text-center p-2">
-        <thead>
-          <th>Nº</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Categoria</th>
-          <th>Estado</th>
-          <th>Acción</th>
-        </thead>
+    <table class="table table-striped text-center p-2">
+      <thead>
+        <th>Nº</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Categoria</th>
+        <th>Estado</th>
+        <th>Acción</th>
+      </thead>
 
-        <tbody id="tableBody"></tbody>
+      <tbody id="tableBody">
 
-        <tfoot id="tableFoot">
-          <!-- 
+      </tbody>
+
+      <tfoot id="tableFoot">
+        <!-- 
             <tr>
                 <td colspan="6">
                     <button
@@ -111,10 +101,12 @@
                  <h4 class="text-white bg-danger">No hay productos</h4>
                 </td>
             </tr>
-        --></tfoot>
-      </table>
-    </div>
+        -->
+      </tfoot>
+    </table>
+  </div>
 
-    <script src="scripts/index-ajax.js"></script>
-  </body>
+  <script src="scripts/index-ajax.js"></script>
+</body>
+
 </html>
