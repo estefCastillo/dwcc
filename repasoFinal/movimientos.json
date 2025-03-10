@@ -1,0 +1,22 @@
+{
+  "movimientos": [
+    {
+      "id": "1",
+      "concepto": "jbuagbfcb",
+      "cantidad": -20,
+      "estado": true
+    },
+    {
+      "id": "85f5",
+      "concepto": "ejemplo",
+      "cantidad": "20",
+      "estado": true
+    },
+    {
+      "id": "c5a8",
+      "concepto": "agua",
+      "cantidad": "1",
+      "estado": true
+    }
+  ]
+}
